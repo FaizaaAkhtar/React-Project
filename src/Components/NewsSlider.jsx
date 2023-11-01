@@ -8,13 +8,14 @@ import Slider from "react-slick";
 
 export default function NewsSlider() {
     const settings = {
-       
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true, 
         autoplaySpeed: 3000,
+        prewArrow: false,
+        nextArrow: false
       };
   return (
     <section className='w-100'>

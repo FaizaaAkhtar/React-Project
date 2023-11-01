@@ -13,7 +13,7 @@ export default function Home() {
         <div className='container'>
             <div className='row align-items-center pb-3'>
                 <div className='col-lg-5 col-md-12 col-12 pt-5 text-center content-color2'>
-                  <div className='animate__animated animate__bounce animate__fadeInLeft animate__delay-1s'>
+                  <div className='animate__animated animate__bounce animate__fadeInLeft '>
                    <h1 className='mt-3'>A powerful app for your business.</h1>
                     <p className='mt-3'>From open source to pro services, Piqes helps you
                       to build, deploy, test, and monitor apps.</p>
@@ -26,7 +26,7 @@ export default function Home() {
 
                 </div>
 
-                <div className='col-lg-7 col-md-12 col-12 animate__animated animate__bounce animate__fadeInRight animate__delay-1s'>
+                <div className='col-lg-7 col-md-12 col-12 animate__animated animate__bounce animate__fadeInRight '>
                 <Image src={phone} alt='' fluid/>
                 
                 </div>

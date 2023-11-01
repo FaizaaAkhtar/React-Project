@@ -1,3 +1,7 @@
+body{
+  scroll-behavior: smooth;
+}
+
 .bg-color{
   background-color: #CE5A67;
 }
@@ -15,8 +19,16 @@
 }
 
 .content:hover{
-  background-color: #ffffff;
+  
   color: #CE5A67;
+  background-color: #ffffff;
+}
+
+.content2:hover{
+  
+  color: #ffffff;
+  background-color: #CE5A67;
+  border: 1px solid #CE5A67;
 }
 
 @media (max-width: 767px) {
@@ -29,4 +41,32 @@
   .card-pos{
     margin-top: 50px;
   }
+}
+
+/* styles.css */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* Change to your desired background color */
+  color: #CE5A67 !important; /* Change to your desired text color */
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+.border-pink{
+  border: 1px solid #CE5A67;
+  background-color: #ffffff;
+  color:#CE5A67;
+}
+
+.scroll-effect:hover{
+  border-bottom: 1px solid #CE5A67;
+  color:#CE5A67;
+}
+
+.effect:hover{
+  border-bottom: 1px solid #ffffff;
+  
 }

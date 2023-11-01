@@ -4,15 +4,28 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import 'animate.css';
 import Card from 'react-bootstrap/Card';
+import { useInView } from 'react-intersection-observer';
+
 
 export default function Features() {
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Trigger animation only once
+    threshold: 1, // When 20% of the element is visible animate__bounce content-color
+  });
+
+  const [ref1, inView1] = useInView({
+    triggerOnce: false, // Trigger animation only once
+    delay: 300,
+    threshold: 1, // When 20% of the element is visible animate__bounce content-color
+  });
+
   return (
     <section className='w-100 bg-color2'>
         <Container className='py-5'>
             <Row className='mt-4'>
                 <Col className='text-center'>
-                    <h4 className=" animate__zoomIn animate__animated animate__bounce content-color" data-wow-delay=".2s">Features</h4>
-                    <h1 className="animate__fadeInUp animate__animated animate__bounce" data-wow-delay=".4s" >Your Experience Gets Better And Better Over Time.
+                    <h4 ref={ref} className={`animate__animated animate__bounce content-color ${inView ? 'animate__zoomIn' : ''}`} >Features</h4>
+                    <h1 ref={ref1} className={`animate__animated animate__bounce  ${inView1 ? 'animate__zoomIn' : ''}`} >Your Experience Gets Better And Better Over Time.
                     </h1>
                     <p className="animate__fadeInUp animate__animated animate__bounce" data-wow-delay=".6s">There are many variations of passages of Lorem
                     Ipsum available, but the majority have suffered alteration in some form.</p>
