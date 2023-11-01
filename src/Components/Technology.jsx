@@ -22,7 +22,7 @@ export default function Technology() {
         arrows: false, 
       };
   return (
-    <section className='w-100 bg-color2 pt-4'>
+    <section className='w-100 bg-color2 pt-4' id='technology'>
         <Container>
       <Slider {...settings}>
           <div className='d-flex'>
